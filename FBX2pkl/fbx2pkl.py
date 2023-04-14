@@ -5,32 +5,16 @@ import numpy as np
 import pickle 
 
 HOME_FILE_PATH = os.path.abspath('homefile.blend')
-SRC_DATA_DIR ='D:/human3.6_dataset_train/fbx_file'
-OUT_DATA_DIR ='D:/human3.6_dataset_train/fbx2pkl'
+SRC_DATA_DIR ='D:/NCKU/music_course/implement/ChoreoMaster/ChoreoMaster_Dataset/motion_fbx'
+OUT_DATA_DIR ='Choreomaster_pkl_with_finger'
 
 MIN_NR_FRAMES = 64
 RESOLUTION = (512, 512)
 
-# BASE_JOINT_NAMES = ['Head', 'Neck',
-#                     'RightArm', 'RightForeArm', 'RightHand', 'LeftArm', 'LeftForeArm', 'LeftHand',
-#                     'Hips', 'RightUpLeg', 'RightLeg', 'RightFoot', 'LeftUpLeg', 'LeftLeg', 'LeftFoot',
-#                     'LeftToeBase', 'RightToeBase',
-#                     'LeftHandThumb1', 'LeftHandThumb2', 'LeftHandThumb3', 
-#                     'LeftHandIndex1', 'LeftHandIndex2', 'LeftHandIndex3', 
-#                     'LeftHandMiddle1', 'LeftHandMiddle2', 'LeftHandMiddle3', 
-#                     'LeftHandRing1', 'LeftHandRing2', 'LeftHandRing3', 
-#                     'LeftHandPinky1', 'LeftHandPinky2', 'LeftHandPinky3', 
-#                     'RightHandThumb1', 'RightHandThumb2', 'RightHandThumb3', 
-#                     'RightHandIndex1', 'RightHandIndex2', 'RightHandIndex3', 
-#                     'RightHandMiddle1', 'RightHandMiddle2', 'RightHandMiddle3', 
-#                     'RightHandRing1', 'RightHandRing2', 'RightHandRing3', 
-#                     'RightHandPinky1', 'RightHandPinky2', 'RightHandPinky3'
-#                     ]
-
 BASE_JOINT_NAMES = ['Head', 'Neck',
                     'RightArm', 'RightForeArm', 'RightHand', 'LeftArm', 'LeftForeArm', 'LeftHand',
                     'Hips', 'RightUpLeg', 'RightLeg', 'RightFoot', 'LeftUpLeg', 'LeftLeg', 'LeftFoot',
-                    'LeftFoot_End', 'RightFoot_End',
+                    'LeftToeBase', 'RightToeBase',
                     'LeftHandThumb1', 'LeftHandThumb2', 'LeftHandThumb3', 
                     'LeftHandIndex1', 'LeftHandIndex2', 'LeftHandIndex3', 
                     'LeftHandMiddle1', 'LeftHandMiddle2', 'LeftHandMiddle3', 
@@ -42,6 +26,22 @@ BASE_JOINT_NAMES = ['Head', 'Neck',
                     'RightHandRing1', 'RightHandRing2', 'RightHandRing3', 
                     'RightHandPinky1', 'RightHandPinky2', 'RightHandPinky3'
                     ]
+
+# BASE_JOINT_NAMES = ['Head', 'Neck',
+#                     'RightArm', 'RightForeArm', 'RightHand', 'LeftArm', 'LeftForeArm', 'LeftHand',
+#                     'Hips', 'RightUpLeg', 'RightLeg', 'RightFoot', 'LeftUpLeg', 'LeftLeg', 'LeftFoot',
+#                     'LeftFoot_End', 'RightFoot_End',
+#                     'LeftHandThumb1', 'LeftHandThumb2', 'LeftHandThumb3', 
+#                     'LeftHandIndex1', 'LeftHandIndex2', 'LeftHandIndex3', 
+#                     'LeftHandMiddle1', 'LeftHandMiddle2', 'LeftHandMiddle3', 
+#                     'LeftHandRing1', 'LeftHandRing2', 'LeftHandRing3', 
+#                     'LeftHandPinky1', 'LeftHandPinky2', 'LeftHandPinky3', 
+#                     'RightHandThumb1', 'RightHandThumb2', 'RightHandThumb3', 
+#                     'RightHandIndex1', 'RightHandIndex2', 'RightHandIndex3', 
+#                     'RightHandMiddle1', 'RightHandMiddle2', 'RightHandMiddle3', 
+#                     'RightHandRing1', 'RightHandRing2', 'RightHandRing3', 
+#                     'RightHandPinky1', 'RightHandPinky2', 'RightHandPinky3'
+#                     ]
 
 # BASE_JOINT_NAMES = ['Head_01', 'Nack_01',
 #                     'R_Arm01', 'R_Elbow01', 'R_Wrist', 'L_Arm01', 'L_Elbow01', 'L_Wrist',
