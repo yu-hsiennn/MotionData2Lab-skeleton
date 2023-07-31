@@ -5,8 +5,8 @@ import numpy as np
 import pickle 
 
 HOME_FILE_PATH = os.path.abspath('homefile.blend')
-SRC_DATA_DIR ='D:/NCKU/music_course/implement/ChoreoMaster/ChoreoMaster_Dataset/motion_fbx'
-OUT_DATA_DIR ='Choreomaster_pkl_with_finger'
+SRC_DATA_DIR ='Tpos_fbx'
+OUT_DATA_DIR ='Tpos_data'
 
 MIN_NR_FRAMES = 64
 RESOLUTION = (512, 512)
